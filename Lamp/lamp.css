@@ -29,6 +29,10 @@ main{
     gap: 24px;
 }
 
+main div:first-child{
+    cursor: pointer;
+}
+
 .button-container{
     display: flex;
     gap: 12px;
