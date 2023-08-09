@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 30vw 30vw;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 1.5rem;
+}
+
+button{
+    background-color: midnightblue;
+    text-decoration: none;
+    font-weight: 600;
+    height: 50px;
+    width: 150px;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+.titulo, .cadastro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px
+}
+
+.titulo{
+    gap: 24px;
+}
+
+.vermelho{
+    color: red;
+}
+
+.azul{
+    color: blue;
+}
