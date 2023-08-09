@@ -11,6 +11,8 @@
 }
 
 body{
+    font-family: var(--font);
+    font-weight: 400;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -34,8 +36,25 @@ main{
     gap: 32px;
 }
 
+table tr:first-child{
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--blue);
+}
+
 tr + tr{
     height: 5rem;
+}
+
+td *{
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+}
+
+td a:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 
