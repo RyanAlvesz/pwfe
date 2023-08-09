@@ -12,11 +12,10 @@
 
 body{
     display: flex;
-    height: 100vh;
-    width: 100vw;
     flex-direction: column;
+    height: 100vh;
     justify-content: space-between;
-    font-family: var(--font);
+    align-items: center;
 }
 
 header, footer{
@@ -28,16 +27,15 @@ header, footer{
     font-weight: 600;
 }
 
-.label{
-    height: 1fr;
+main{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 32px;
 }
 
-.classes{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    text-decoration: none;
-    color: black;
+tr + tr{
+    height: 5rem;
 }
+
 
