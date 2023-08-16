@@ -8,6 +8,7 @@ const botaoIdentificar = document.getElementById('identificar')
 const botaoMedia = document.getElementById('media')
 const botaoSomar3 = document.getElementById('somar3')
 const botaoVerificar = document.getElementById('verificar')
+const botaoOrdenar = document.getElementById('ordenar')
 
 function somar () {
 
@@ -150,23 +151,64 @@ function verificarMultiplos() {
 
     if (numeroDez % 2 == 0 || numeroDez % 3 == 0){
 
-        aux = `${aux} - ${numeroDez}`
+        if(numeroNove % 2 == 0 || numeroNove % 3 == 0){
+
+            aux = `${aux} - ${numeroDez}`
+
+        }else{
+
+            aux = numeroDez
+
+        }
 
     }
 
     if (numeroOnze % 2 == 0 || numeroOnze % 3 == 0){
         
-        aux = `${aux} - ${numeroOnze}`
+        if(numeroNove % 2 == 0 || numeroNove % 3 == 0 || numeroDez % 2 == 0 || numeroDez % 3 == 0){
+
+            aux = `${aux} - ${numeroOnze}`
+
+        }else{
+
+            aux = numeroOnze
+
+        }
 
     }
     
     if (numeroDoze % 2 == 0 || numeroDoze % 3 == 0){
         
-        aux = `${aux} - ${numeroDoze}`
+        if(numeroNove % 2 == 0 || numeroNove % 3 == 0 || numeroDez % 2 == 0 || numeroDez % 3 == 0 || numeroOnze % 2 == 0 || numeroOnze % 3 == 0){
+
+            aux = `${aux} - ${numeroDoze}`
+
+        }else{
+
+            aux = numeroDoze
+
+        }
 
     }
 
     resultadoMultiplos.textContent = aux
+
+}
+
+function ordenar () {
+
+    const numeroTreze = Number(document.getElementById('n13').value)
+    const numeroQuatorze = Number(document.getElementById('n14').value)
+    const numeroQuinze = Number(document.getElementById('n15').value)
+    const numeroDezesseis = Number(document.getElementById('n16').value)
+    const numeroDezessete = Number(document.getElementById('n17').value)
+    const resultadoOrdernar = document.getElementById('ordenados')
+
+    const menor = Math.min(numeroTreze, numeroQuatorze, numeroQuinze, numeroDezesseis, numeroDezessete)
+
+    const maior = Math.max(numeroTreze, numeroQuatorze, numeroQuinze, numeroDezesseis, numeroDezessete)
+
+    resultadoOrdernar.textContent = `${menor} - ${maior}`
 
 }
 
@@ -178,3 +220,4 @@ botaoIdentificar.addEventListener('click', identificar)
 botaoMedia.addEventListener('click', calcularMedia)
 botaoSomar3.addEventListener('click', somarTresValores)
 botaoVerificar.addEventListener('click', verificarMultiplos)
+botaoOrdenar.addEventListener('click', ordenar)
