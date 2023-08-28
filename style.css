@@ -6,6 +6,9 @@
 
 :root{
     --blue: #00003d;
+    --purple-gradient: rgba(86,14,162,1) 0%, rgba(199,141,199,1) 50%, rgba(244,105,166,1);
+    --blue-gradient: rgba(42,77,193,1) 0%, rgba(86,152,226,1) 50%, rgba(147,91,202,1) ;
+    --pink-gradient: rgba(221,82,141,1) 0%, rgba(255,140,105,1) 50%, rgba(251,174,82,1);
     --font: 'Poppins', sans-serif;
     --white: white;
     --grey: #eeeeee;
@@ -29,7 +32,8 @@ header, footer{
 
 header{
     padding-inline: 4rem;
-    background-color: var(--blue);
+    background: rgb(86,14,162);
+    background: linear-gradient(135deg, var(--pink-gradient) 100%);
     color: var(--white);
 }
 
@@ -59,7 +63,11 @@ main{
 }
 
 main h1{
-    color: var(--blue);
+    background-image: linear-gradient(135deg, var(--pink-gradient) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: var(--blue);
     font-size: 2.5rem;
 }
 
@@ -67,7 +75,11 @@ table th{
     background-color: var(--grey);
     font-weight: 600;
     font-size: 1.5rem;
-    color: var(--blue);
+    background-image: linear-gradient(190deg, var(--pink-gradient) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: var(--blue);
     position: sticky;
     top: -1px;
     border: solid 0.2px var(--light-grey);
@@ -103,7 +115,11 @@ footer{
     justify-content: center;
     font-weight: 600;
     font-size: 1.3rem;
-    color: var(--blue);
+    background-image: linear-gradient(135deg, var(--pink-gradient) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: var(--blue);
 }
 
 
