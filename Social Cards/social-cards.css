@@ -10,6 +10,7 @@ body{
     background-color: #F4F4F4;
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
+    align-items: center;
 }
 
 .container-chat{
@@ -18,12 +19,29 @@ body{
     flex-direction: column;
     background-color: white;
     width: 400px;
-    padding: 24px 16px;
+    padding: 0px 24px 32px 24px;
     border-radius: 12px;
     gap: 24px;
     box-shadow: 0px 2px 4px #0005;
-    margin-top: 100px;
-    height: fit-content;
+    height: 60vh;
+    overflow-y: scroll;
+}
+
+.container-chat::-webkit-scrollbar{
+    display: none;
+  }
+
+.titulo{
+    background-color: white;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    z-index: 2;
+    padding: 24px 16px;
+    width: 100%;
+    height: 100%;
 }
 
 .card{
