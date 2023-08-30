@@ -4,7 +4,7 @@ const pessoas = [
 
     {
         nome: 'Alissa',
-        imagem: 'alissa.jpg',
+        imagem: 'Alissa.jpg',
         mensagem: 'Já levei as crianças para a escola',
         contato: 'Vida',
         tempo: 'Há 1 hora',
