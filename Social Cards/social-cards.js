@@ -5,7 +5,7 @@ const pessoas = [
     {
         nome: 'Alissa',
         imagem: 'Alissa.jpg',
-        mensagem: 'Já levei as crianças para a escola',
+        mensagem: 'Já levei as ...',
         contato: 'Vida',
         tempo: 'Há 1 hora',
         quantidade: '2'
@@ -14,7 +14,7 @@ const pessoas = [
     {
         nome: 'Clarissa',
         imagem: 'clarissa.jpg',
-        mensagem: 'Me passa seu pix',
+        mensagem: 'Passa seu pix',
         contato: 'Clarrisa Trabalho',
         tempo: 'Há 2 horas',
         quantidade: '5'
@@ -23,7 +23,7 @@ const pessoas = [
     {
         nome: 'Liz',
         imagem: 'eliza.jpg',
-        mensagem: 'Já passei no mercado',
+        mensagem: 'Já passei no ...',
         contato: 'Elizabeth',
         tempo: 'Há 3 horas',
         quantidade: '7'
