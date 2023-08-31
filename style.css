@@ -11,8 +11,7 @@
     --pink-gradient: rgba(221,82,141,1) 0%, rgba(255,140,105,1) 50%, rgba(251,174,82,1);
     --font: 'Poppins', sans-serif;
     --white: white;
-    --grey: #eeeeee;
-    --light-grey: #dbdbdb;
+    --light-grey: #f4f4f4;
 }
 
 body{
@@ -72,22 +71,26 @@ main h1{
 }
 
 table th{
-    background-color: var(--grey);
+    background-color: var(--light-grey);
     font-weight: 600;
     font-size: 1.5rem;
-    background-image: linear-gradient(190deg, var(--pink-gradient) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-color: var(--blue);
     position: sticky;
     top: -1px;
     border: solid 0.2px var(--light-grey);
 }
 
+th span{
+    background-image: linear-gradient(190deg, var(--pink-gradient) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: var(--blue);
+}
+
 table{
     border-collapse: collapse;
     width: 100%;
+    border: solid 0.2px var(--light-grey);
 }
 
 tr{
