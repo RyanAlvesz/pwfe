@@ -35,7 +35,6 @@ body{
     background-color: white;
     width: 100%;
     padding: 0px 24px 32px 24px;
-    gap: 24px;
     box-shadow: 0px 2px 4px #0005;
     height: 80%;
     overflow-y: scroll;
@@ -46,6 +45,10 @@ body{
 
 .container-chat::-webkit-scrollbar{
     display: none;
+}
+
+.card:not(:nth-child(2)){
+    margin-top: 24px;
 }
 
 .titulo{
