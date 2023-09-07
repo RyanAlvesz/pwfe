@@ -4,11 +4,14 @@ const botaoPesquisar = document.getElementById('botao-pesquisar')
 const input = document.getElementById('pesquisa')
 
 const pegarImagens = async () => {
-    const pesquisa = document.getElementById('pesquisa').value
-    const url = 'https://dog.ceo/api/breed/' + pesquisa + '/images'    
-    if (pesquisa == ''){
-        url = 'https://dog.ceo/api/breed/hound/images'
+    let pesquisa = document.getElementById('pesquisa').value
+    pesquisa = String(pesquisa).toLocaleLowerCase()
+    let url = 'https://dog.ceo/api/breed/hound/images'
+
+    if (pesquisa != ''){
+        url = 'https://dog.ceo/api/breed/' + pesquisa + '/images'    
     }
+
     const response = await fetch(url)
     const imagens = await response.json()
     return imagens.message
@@ -29,8 +32,13 @@ const carregarFotos = async () => {
 }
 
 botaoPesquisar.addEventListener('click' , carregarFotos)
-input.addEventListener('keydown', (carregarFotos) => {
+
+input.addEventListener('keyup', function(e) {
     
+    if (e.key === 'Enter'){
+        carregarFotos()
+    }
+
 })
 
 carregarFotos()
