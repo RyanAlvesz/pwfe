@@ -3,7 +3,7 @@
 // Funções puras não interagem com o mundo de fora. Elas precisam de parâmetros e retornam valores
 // Responsabilidade única (SOLID) - Funções só executam uma tarefa
 
-// Arrou function - São atribuidas a variáveis - Const variavel = (a, b) => {a + b}
+// Arrow function - São atribuidas a variáveis - Const variavel = (a, b) => {a + b}
 
 // Jeito atual de liberar array - funcionarios.forEach(funcionarios => console.log(funcionarios.nome))
 
