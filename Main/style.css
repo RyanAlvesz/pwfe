@@ -5,86 +5,83 @@
 }
 
 :root{
-    --blue: #00003d;
-    --purple-gradient: rgba(86,14,162,1) 0%, rgba(199,141,199,1) 50%, rgba(244,105,166,1);
-    --blue-gradient: rgba(42,77,193,1) 0%, rgba(86,152,226,1) 50%, rgba(147,91,202,1);
-    --pink-gradient: rgba(221,82,141,1) 0%, rgba(255,140,105,1) 50%, rgba(251,174,82,1);
-    --font: 'Poppins', sans-serif;
+    --purple: #866475;
+    --blue: #789ac0;
+    --light-blue: #729cbb;
     --white: white;
-    --light-grey: #f4f4f4;
+    --light-grey: #ead5c6;
+    --red: #963027;
+    --font: 'Poppins', sans-serif;
+    --1989-font: 'Shantell Sans', cursive;;
 }
 
 body{
     font-family: var(--font);
     font-weight: 400;
-    display: grid;
-    grid-row: auto  ;
-    align-items: center;
-    height: 100vh;
-}
-
-header, footer{
     display: flex;
+    flex-direction: column;
+    height: 100vh;
     align-items: center;
-    height: 10vh;
+    justify-content: center;
 }
 
-header{
-    padding-inline: 4rem;
-    background: rgb(86,14,162);
-    background: linear-gradient(135deg, var(--pink-gradient) 100%);
-    color: var(--white);
-}
-
-header img{
-    height: 3rem;
+body::after{
+    content: '';
+    display: block;
+    background: linear-gradient(180deg, rgba(139,177,205,1) 0%, rgba(103,137,163,1) 100%);
+    width: 90%;
+    height: 90%;
+    position: fixed;
+    z-index: -999;
+    margin: auto;
+    inset: 0;
 }
 
 main{
-    height: 80vh;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     width: 100%;
-    padding: 3rem 3rem 1rem 3rem;
+    padding: 3rem 10vw 0 10vw;
     gap: 32px;
+    align-items: center;
+    height: 80vh;
+}
+
+main h1, footer{
+    font-family: var(--1989-font);
+    color: var(--white);
+    text-align: center;
+}
+
+main h1{
+    font-size: 2.2rem;
 }
 
 .container-table{
+    width: 100%;
     overflow: auto;
     display: flex;
-    width: 100%;
     scroll-behavior: smooth;
+    border: solid 0.2px var(--light-grey);
+    background-color: var(--light-grey);
+    border-radius: 12px;
 }
 
 .container-table::-webkit-scrollbar{
     display: none;
 }
 
-main h1{
-    background-image: linear-gradient(135deg, var(--pink-gradient) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-color: var(--blue);
-    font-size: 2.5rem;
-}
-
 table th{
-    background-color: var(--light-grey);
     font-weight: 600;
     font-size: 1.5rem;
     position: sticky;
     top: -1px;
     border: solid 0.2px var(--light-grey);
+    background-color: var(--light-grey);
 }
 
 th span{
-    background-image: linear-gradient(190deg, var(--pink-gradient) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-color: var(--blue);
+    color: var(--red);
 }
 
 table{
@@ -101,6 +98,7 @@ tr > td{
     font-size: 1.4rem;
     padding: 24px;
     border: solid 0.2px var(--light-grey);
+    background-color: var(--white);
 }
 
 td *{
@@ -115,14 +113,81 @@ td a:hover{
 }
 
 footer{
+    display: flex;
+    align-items: center;
     justify-content: center;
     font-weight: 600;
     font-size: 1.3rem;
-    background-image: linear-gradient(135deg, var(--pink-gradient) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-color: var(--blue);
+    width: 100%;
+    padding: 32px 0;
 }
 
+img[alt~=Gaivota]{
+    position: absolute;
+    z-index: -1;
+}
 
+#gaivota-1{
+    right: 5%;
+    top: 6%;
+    width: 180px;
+}
+
+#gaivota-2{
+    left: 5%;
+    top: 6%;
+    width: 250px;
+}
+
+#gaivota-3{
+    right: 15%;
+    bottom: 2%;
+    width: 300px;
+}
+
+@media (max-width: 762px) {
+    tr td:nth-child(2), table th:nth-child(2){
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    
+    main h1{
+        font-size: 1.4rem;
+    }
+
+    table th{
+        font-size: 1.2rem;
+    }
+
+    tr td:nth-child(3), table th:nth-child(3){
+        display: none;
+    }
+
+    tr td:nth-child(1), table th:nth-child(1){
+        text-align: center;
+    }
+
+    td *{
+        font-size: 1.2rem; 
+        text-decoration: none;
+        color: black;
+    }
+
+    footer{
+        font-size: 1rem;
+    }
+
+    #gaivota-1{
+        right: 0;
+        top: 10%;
+        width: 100px;
+    }
+
+    #gaivota-2{
+        left: -5%;
+        width: 200px;
+    }
+
+}

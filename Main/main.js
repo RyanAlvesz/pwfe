@@ -54,6 +54,12 @@ const aula = [
         descricao: 'Criação de elementos a partir do Javascript',
         data: '30/08/2023',
         linkAula: './Chat/chat.html'
+    },
+    {
+        titulo: 'Atividade - Harry Potter API',
+        descricao: 'Wiki com informações sobre os personagens, poções e feitiços do universo de Harry Potter',
+        data: '13/10/2023',
+        linkAula: 'https://ryanalvesz.github.io/harry_potter/'
     }
 ]
 
