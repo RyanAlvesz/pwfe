@@ -29,8 +29,8 @@ body::after{
     content: '';
     display: block;
     background: linear-gradient(180deg, rgba(139,177,205,1) 0%, rgba(103,137,163,1) 100%);
-    width: 90%;
-    height: 90%;
+    width: calc(100% - 10vh);
+    height: calc(100% - 10vh);
     position: fixed;
     z-index: -999;
     margin: auto;
@@ -152,9 +152,14 @@ img[alt~=Gaivota]{
 }
 
 @media (max-width: 400px) {
+
+    body::after{
+        width: calc(100% - 5vh);
+        height: calc(100% - 5vh);    
+    }
     
     main h1{
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     table th{
@@ -179,15 +184,8 @@ img[alt~=Gaivota]{
         font-size: 1rem;
     }
 
-    #gaivota-1{
-        right: 0;
-        top: 10%;
-        width: 100px;
-    }
-
-    #gaivota-2{
-        left: -5%;
-        width: 200px;
+    #gaivota-1, #gaivota-2{
+        display: none;
     }
 
 }

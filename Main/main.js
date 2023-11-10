@@ -60,6 +60,12 @@ const aula = [
         descricao: 'Wiki com informações sobre os personagens, poções e feitiços do universo de Harry Potter',
         data: '13/10/2023',
         linkAula: 'https://ryanalvesz.github.io/harry_potter/'
+    },
+    {
+        titulo: 'Atividade - Tony Pizzaria',
+        descricao: 'Site responsivo de uma pizzaria',
+        data: '25/10/2023',
+        linkAula: 'https://ryanalvesz.github.io/tony-pizzaria/'
     }
 ]
 
